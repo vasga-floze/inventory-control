@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            INVENTORY CONTROL
+        </title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        <style>
+            #background { padding: 25px; background:  #c6ecc6; background-repeat: no-repeat; background-size: cover;}
+        </style>
+    </head>
+
+    <body id="background">
+        <!--Insert a image-->
+        <img src="download.png" class="img-fluid rounded mx-auto d-block" width="800">
+        <div class="d-flex justify-content-center text-center">
+            <div class="col-3 card bg-dark text-light" style="width: 24rem;">
+                <div class="card-header">
+                <h4> ADD A NEW PRODUCT</h4>
+                </div>
+                <!--Card-->
+                <div class="card-body">
+                    <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                        <div class="form-group">
+                            <label>Description</label><label class="validation-error hide" id="descriptionValidationError"></label>
+                            <input type="text" class="form-control" id="description" placeholder="Description" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Buy Price</label>
+                            <input type="text" class="form-control" id="buy" placeholder="Buy price" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Sale Price</label>
+                            <input type="text" class="form-control" id="sale" placeholder="Sale Price">
+                        </div>
+                        <div class="form-group">
+                            <label>Stock</label>
+                            <input type="number" class="form-control" id="stock" placeholder="Stock" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Bar Code</label>
+                            <input type="text" class="form-control" id="barcode" placeholder="Barcode">
+                        </div>
+                        <div class="form-group">
+                            <label>Category</label>
+                            <input type="text" class="form-control" id="category" placeholder="Category">
+                        </div>
+                        <button type="submit"  class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+            <!--Table-->
+            <div class="col">
+                <div class="table-responsive">
+                    <table class="table table-bordered table-dark " id="productList">
+                        <thead class="text-dark">
+                            <tr class="table-light">
+                                <th>Description</th>
+                                <th>Buy Price</th>
+                                <th>Sale Price</th>
+                                <th>Stock</th>
+                                <th>Bar Code</th>
+                                <th>Category</th>
+                                <th colspan="2"> Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!--Content table-->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+        <img src="ugb.png" class="img-fluid rounded mx-auto d-block" width="350">
+        <script src="script.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    </body>
+</html>
